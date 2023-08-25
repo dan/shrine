@@ -240,8 +240,7 @@ class Shrine
       def copy(io, id, **copy_options)
         # don't inherit source object metadata or AWS tags
         options = {
-          metadata_directive: "REPLACE",
-          tagging_directive: "REPLACE"
+          metadata_directive: "REPLACE"
         }
 
         if io.size && io.size >= @multipart_threshold[:copy]
